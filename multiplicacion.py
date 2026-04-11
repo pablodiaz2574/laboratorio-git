@@ -15,8 +15,8 @@ def ejecutar_multiplicacion():
 
         resultado = multiplicar(num1, num2)
         print(f"Resultado: {resultado}")
-        
+
 # Opción de repetir
-        opcion = input("¿Deseas hacer otra resta? (si/no): ").lower()
+        opcion = input("¿Deseas hacer otra multiplicación? (si/no): ").lower()
         if opcion != 'si':
             break
