@@ -1,15 +1,22 @@
-#
-def suma (a,b):
-    resultado= a+b
-    return resultado
+# Pide un número al que usa el codigo y luego lo valida para que sea correcto
+def pedir_numero(mensaje):
+    return float(input(mensaje))
 
-# Mensajito de bienvenida
-print("------LA CALCULADORA DE SUMA------")
+def sumar(a, b):
+    return a + b
 
-# Ingreso de datos o numeros 
+# Función principal de la suma con reintentos
+def ejecutar_suma():
+    while True:
+        print("\n----SUMA----")
+        
+        num1 = pedir_numero("Ingresa el primer número: ")
+        num2 = pedir_numero("Ingresa el segundo número: ")
 
-num1= float(input("Ingrese el primer numero: "))
-num2 = float(input("Ingrese el segundo numero: "))
+        resultado = sumar(num1, num2)
+        print(f"Resultado: {resultado}")
 
-resultado =suma (num1,num2)
-print("El resultado es: ", resultado)
+# Opción de repetir
+        opcion = input("¿Deseas hacer otra suma? (si/no): ").lower()
+        if opcion != 'si':
+            break
